@@ -10,33 +10,193 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as AmbulancesRouteImport } from './routes/ambulances'
+import { Route as BloodBanksRouteImport } from './routes/blood-banks'
+import { Route as BloodRequestsRouteImport } from './routes/blood-requests'
+import { Route as DeleteMyDataRouteImport } from './routes/delete-my-data'
+import { Route as DonorRegisterRouteImport } from './routes/donor-register'
+import { Route as DonorsRouteImport } from './routes/donors'
+import { Route as HelplineRouteImport } from './routes/helpline'
+import { Route as HospitalsRouteImport } from './routes/hospitals'
+import { Route as MyBookingRouteImport } from './routes/my-booking'
+import { Route as WardStatsRouteImport } from './routes/ward-stats'
+import { Route as DoctorsIndexRouteImport } from './routes/doctors.index'
+import { Route as DoctorsIdRouteImport } from './routes/doctors.$id'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AmbulancesRoute = AmbulancesRouteImport.update({
+  id: '/ambulances',
+  path: '/ambulances',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BloodBanksRoute = BloodBanksRouteImport.update({
+  id: '/blood-banks',
+  path: '/blood-banks',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BloodRequestsRoute = BloodRequestsRouteImport.update({
+  id: '/blood-requests',
+  path: '/blood-requests',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DeleteMyDataRoute = DeleteMyDataRouteImport.update({
+  id: '/delete-my-data',
+  path: '/delete-my-data',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DonorRegisterRoute = DonorRegisterRouteImport.update({
+  id: '/donor-register',
+  path: '/donor-register',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DonorsRoute = DonorsRouteImport.update({
+  id: '/donors',
+  path: '/donors',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const HelplineRoute = HelplineRouteImport.update({
+  id: '/helpline',
+  path: '/helpline',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const HospitalsRoute = HospitalsRouteImport.update({
+  id: '/hospitals',
+  path: '/hospitals',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MyBookingRoute = MyBookingRouteImport.update({
+  id: '/my-booking',
+  path: '/my-booking',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const WardStatsRoute = WardStatsRouteImport.update({
+  id: '/ward-stats',
+  path: '/ward-stats',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DoctorsIndexRoute = DoctorsIndexRouteImport.update({
+  id: '/doctors/',
+  path: '/doctors/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DoctorsIdRoute = DoctorsIdRouteImport.update({
+  id: '/doctors/$id',
+  path: '/doctors/$id',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/ambulances': typeof AmbulancesRoute
+  '/blood-banks': typeof BloodBanksRoute
+  '/blood-requests': typeof BloodRequestsRoute
+  '/delete-my-data': typeof DeleteMyDataRoute
+  '/donor-register': typeof DonorRegisterRoute
+  '/donors': typeof DonorsRoute
+  '/helpline': typeof HelplineRoute
+  '/hospitals': typeof HospitalsRoute
+  '/my-booking': typeof MyBookingRoute
+  '/ward-stats': typeof WardStatsRoute
+  '/doctors/$id': typeof DoctorsIdRoute
+  '/doctors/': typeof DoctorsIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/ambulances': typeof AmbulancesRoute
+  '/blood-banks': typeof BloodBanksRoute
+  '/blood-requests': typeof BloodRequestsRoute
+  '/delete-my-data': typeof DeleteMyDataRoute
+  '/donor-register': typeof DonorRegisterRoute
+  '/donors': typeof DonorsRoute
+  '/helpline': typeof HelplineRoute
+  '/hospitals': typeof HospitalsRoute
+  '/my-booking': typeof MyBookingRoute
+  '/ward-stats': typeof WardStatsRoute
+  '/doctors/$id': typeof DoctorsIdRoute
+  '/doctors': typeof DoctorsIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/ambulances': typeof AmbulancesRoute
+  '/blood-banks': typeof BloodBanksRoute
+  '/blood-requests': typeof BloodRequestsRoute
+  '/delete-my-data': typeof DeleteMyDataRoute
+  '/donor-register': typeof DonorRegisterRoute
+  '/donors': typeof DonorsRoute
+  '/helpline': typeof HelplineRoute
+  '/hospitals': typeof HospitalsRoute
+  '/my-booking': typeof MyBookingRoute
+  '/ward-stats': typeof WardStatsRoute
+  '/doctors/$id': typeof DoctorsIdRoute
+  '/doctors/': typeof DoctorsIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/ambulances'
+    | '/blood-banks'
+    | '/blood-requests'
+    | '/delete-my-data'
+    | '/donor-register'
+    | '/donors'
+    | '/helpline'
+    | '/hospitals'
+    | '/my-booking'
+    | '/ward-stats'
+    | '/doctors/$id'
+    | '/doctors/'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/ambulances'
+    | '/blood-banks'
+    | '/blood-requests'
+    | '/delete-my-data'
+    | '/donor-register'
+    | '/donors'
+    | '/helpline'
+    | '/hospitals'
+    | '/my-booking'
+    | '/ward-stats'
+    | '/doctors/$id'
+    | '/doctors'
+  id:
+    | '__root__'
+    | '/'
+    | '/ambulances'
+    | '/blood-banks'
+    | '/blood-requests'
+    | '/delete-my-data'
+    | '/donor-register'
+    | '/donors'
+    | '/helpline'
+    | '/hospitals'
+    | '/my-booking'
+    | '/ward-stats'
+    | '/doctors/$id'
+    | '/doctors/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AmbulancesRoute: typeof AmbulancesRoute
+  BloodBanksRoute: typeof BloodBanksRoute
+  BloodRequestsRoute: typeof BloodRequestsRoute
+  DeleteMyDataRoute: typeof DeleteMyDataRoute
+  DonorRegisterRoute: typeof DonorRegisterRoute
+  DonorsRoute: typeof DonorsRoute
+  HelplineRoute: typeof HelplineRoute
+  HospitalsRoute: typeof HospitalsRoute
+  MyBookingRoute: typeof MyBookingRoute
+  WardStatsRoute: typeof WardStatsRoute
+  DoctorsIdRoute: typeof DoctorsIdRoute
+  DoctorsIndexRoute: typeof DoctorsIndexRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -48,11 +208,107 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/ambulances': {
+      id: '/ambulances'
+      path: '/ambulances'
+      fullPath: '/ambulances'
+      preLoaderRoute: typeof AmbulancesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/blood-banks': {
+      id: '/blood-banks'
+      path: '/blood-banks'
+      fullPath: '/blood-banks'
+      preLoaderRoute: typeof BloodBanksRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/blood-requests': {
+      id: '/blood-requests'
+      path: '/blood-requests'
+      fullPath: '/blood-requests'
+      preLoaderRoute: typeof BloodRequestsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/delete-my-data': {
+      id: '/delete-my-data'
+      path: '/delete-my-data'
+      fullPath: '/delete-my-data'
+      preLoaderRoute: typeof DeleteMyDataRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/donor-register': {
+      id: '/donor-register'
+      path: '/donor-register'
+      fullPath: '/donor-register'
+      preLoaderRoute: typeof DonorRegisterRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/donors': {
+      id: '/donors'
+      path: '/donors'
+      fullPath: '/donors'
+      preLoaderRoute: typeof DonorsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/helpline': {
+      id: '/helpline'
+      path: '/helpline'
+      fullPath: '/helpline'
+      preLoaderRoute: typeof HelplineRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/hospitals': {
+      id: '/hospitals'
+      path: '/hospitals'
+      fullPath: '/hospitals'
+      preLoaderRoute: typeof HospitalsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/my-booking': {
+      id: '/my-booking'
+      path: '/my-booking'
+      fullPath: '/my-booking'
+      preLoaderRoute: typeof MyBookingRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/ward-stats': {
+      id: '/ward-stats'
+      path: '/ward-stats'
+      fullPath: '/ward-stats'
+      preLoaderRoute: typeof WardStatsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/doctors/': {
+      id: '/doctors/'
+      path: '/doctors'
+      fullPath: '/doctors/'
+      preLoaderRoute: typeof DoctorsIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/doctors/$id': {
+      id: '/doctors/$id'
+      path: '/doctors/$id'
+      fullPath: '/doctors/$id'
+      preLoaderRoute: typeof DoctorsIdRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AmbulancesRoute: AmbulancesRoute,
+  BloodBanksRoute: BloodBanksRoute,
+  BloodRequestsRoute: BloodRequestsRoute,
+  DeleteMyDataRoute: DeleteMyDataRoute,
+  DonorRegisterRoute: DonorRegisterRoute,
+  DonorsRoute: DonorsRoute,
+  HelplineRoute: HelplineRoute,
+  HospitalsRoute: HospitalsRoute,
+  MyBookingRoute: MyBookingRoute,
+  WardStatsRoute: WardStatsRoute,
+  DoctorsIdRoute: DoctorsIdRoute,
+  DoctorsIndexRoute: DoctorsIndexRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
